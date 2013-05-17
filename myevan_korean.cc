@@ -57,7 +57,6 @@ void Korean::Josa::Replace(const std::wstring& srcText, std::wstring& outText)
             }
         }
        
-        //puts(Text::UTF8Encoding.GetBytes(word, buf));
         srcTextIter = what[0].second;
         flags |= boost::match_prev_avail;
         flags |= boost::match_not_bob;
