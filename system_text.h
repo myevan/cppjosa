@@ -1,3 +1,6 @@
+#ifndef _SYSTEM_TEXT_H_
+#define _SYSTEM_TEXT_H_
+
 #include <boost/shared_ptr.hpp>
 #include <boost/locale.hpp>
 #include <boost/archive/detail/utf8_codecvt_facet.hpp>
@@ -76,3 +79,4 @@ public:
 
 } // end_of_namespace System
 
+#endif

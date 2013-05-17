@@ -16,8 +16,6 @@ void Korean::Josa::Replace(const std::wstring& srcText, std::wstring& outText)
     outText.clear();
     outText.reserve(srcText.size());
 
-    wchar_t prevChar = (wchar_t)0;
-
     std::wstring::const_iterator srcTextEnd = srcText.end();
     std::wstring::const_iterator srcTextBegin = srcText.begin();
     std::wstring::const_iterator srcTextIter = srcTextBegin;

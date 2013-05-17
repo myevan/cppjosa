@@ -1,3 +1,6 @@
+#ifndef _MYEVAN_KOREAN_H_
+#define _MYEVAN_KOREAN_H_
+
 #include "system_text.h"
 
 #include <boost/regex.hpp>
@@ -38,5 +41,7 @@ public:
     static std::wstring ReplaceJosa(const std::wstring& srcText);
 
 }; // end_of_class Korean
+
 } // end_of_namespace Myevan
 
+#endif
