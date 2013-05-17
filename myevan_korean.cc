@@ -3,9 +3,10 @@
 namespace Myevan { 
 
 Korean::Josa::Josa()
-: _josaRegex(U("\\(이\\)가|\\(을\\)를|\\(은\\)는|\\(으\\)로"))
+: _josaRegex(U("\\(이\\)가|\\(와\\)과|\\(을\\)를|\\(은\\)는|\\(으\\)로"))
 {
     InsertJosaPatternPair(U("(이)가"), U("이"), U("가"));
+    InsertJosaPatternPair(U("(와)과"), U("과"), U("와"));
     InsertJosaPatternPair(U("(을)를"), U("을"), U("를"));
     InsertJosaPatternPair(U("(은)는"), U("은"), U("는"));
     InsertJosaPatternPair(U("(으)로"), U("으로"), U("로"));
