@@ -25,7 +25,7 @@ public:
             void InsertJosaPatternPair(const std::wstring& pattern, const std::wstring& first, const std::wstring& second);
 
         private:
-            static bool HasJong(wchar_t inChar);
+            const std::wstring& ChooseJosa(wchar_t prevChar, const std::wstring& josaKey, const JosaPair& josaPair);
 
         private:
             boost::basic_regex<wchar_t> _josaRegex;
