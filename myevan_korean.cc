@@ -3,7 +3,7 @@
 namespace Myevan { 
 
 Korean::Josa::Josa()
-: _josaRegex(U("\\(이\\)가|\\(와\\)과|\\(을\\)를|\\(은\\)는|\\(아\\)야|\\(이\\)여|\\(으\\)로|\\(이\\)라고"))
+: _josaRegex(U("\\(이\\)가|\\(와\\)과|\\(을\\)를|\\(은\\)는|\\(아\\)야|\\(이\\)여|\\(으\\)로|\\(이\\)라"))
 {
     InsertJosaPatternPair(U("(이)가"), U("이"), U("가"));
     InsertJosaPatternPair(U("(와)과"), U("과"), U("와"));
@@ -12,7 +12,7 @@ Korean::Josa::Josa()
     InsertJosaPatternPair(U("(아)야"), U("아"), U("야"));
     InsertJosaPatternPair(U("(으)로"), U("으로"), U("로"));
     InsertJosaPatternPair(U("(이)여"), U("이여"), U("여"));
-    InsertJosaPatternPair(U("(이)라고"), U("이라고"), U("라고"));
+    InsertJosaPatternPair(U("(이)라"), U("이라"), U("라"));
 }
 
 void Korean::Josa::Replace(const std::wstring& srcText, std::wstring& outText)
@@ -24,9 +24,9 @@ void Korean::Josa::Replace(const std::wstring& srcText, std::wstring& outText)
     std::wstring::const_iterator srcTextBegin = srcText.begin();
     std::wstring::const_iterator srcTextIter = srcTextBegin;
 
-    boost::match_flag_type flags = boost::match_default;
-    boost::match_results<std::wstring::const_iterator> what;
-    while(boost::regex_search(srcTextIter, srcTextEnd, what, _josaRegex, flags))
+    std::regex_constants::match_flag_type flags = std::regex_constants::match_default;
+    std::match_results<std::wstring::const_iterator> what;
+    while(std::regex_search(srcTextIter, srcTextEnd, what, _josaRegex, flags))
     {
         outText.append(srcTextIter, what[0].first);
 
@@ -54,8 +54,9 @@ void Korean::Josa::Replace(const std::wstring& srcText, std::wstring& outText)
         }
        
         srcTextIter = what[0].second;
-        flags |= boost::match_prev_avail;
-        flags |= boost::match_not_bob;
+        flags |= std::regex_constants::match_prev_avail;
+        // CHEKCME::  match_not_bob for c++
+        // flags |= std::regex_constants::match_not_bob;
     }
     outText.append(srcTextIter, srcTextEnd);
 }

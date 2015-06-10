@@ -1,9 +1,10 @@
 #ifndef _SYSTEM_TEXT_H_
 #define _SYSTEM_TEXT_H_
 
-#include <boost/shared_ptr.hpp>
-#include <boost/locale.hpp>
-#include <boost/archive/detail/utf8_codecvt_facet.hpp>
+#include <vector>
+#include <memory>
+#include <locale>
+#include <codecvt>
 
 namespace System { 
 

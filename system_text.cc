@@ -2,7 +2,7 @@
 
 namespace System { 
 
-Text::Encoding Text::UTF8Encoding(std::locale(std::locale(), new boost::archive::detail::utf8_codecvt_facet));
+Text::Encoding Text::UTF8Encoding(std::locale(std::locale("ko_KR.UTF-8")));
 
 } // end_of_namespace System
 

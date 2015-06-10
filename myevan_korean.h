@@ -3,7 +3,8 @@
 
 #include "system_text.h"
 
-#include <boost/regex.hpp>
+#include <regex>
+#include <map>
 
 namespace Myevan { 
 
@@ -28,7 +29,7 @@ public:
             const std::wstring& ChooseJosa(wchar_t prevChar, const std::wstring& josaKey, const JosaPair& josaPair);
 
         private:
-            boost::basic_regex<wchar_t> _josaRegex;
+            std::basic_regex<wchar_t> _josaRegex;
             JosaPatternPaird _josaPatternPaird;
     };
 
