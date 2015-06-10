@@ -1,7 +1,7 @@
 cppjosa
 =======
 
-c++ &amp; boost 한글 조사 처리입니다. 현재 맥에서만 빌드 및 실행 테스트되었습니다.
+c++11 기반 한글 조사 처리입니다. 현재 맥에서만 빌드 및 실행 테스트되었습니다.
 
 ## 예제
 
@@ -22,11 +22,6 @@ c++ &amp; boost 한글 조사 처리입니다. 현재 맥에서만 빌드 및 �
         return 0;
     }
 
-#### 준비
-
-boost 라이브러리가 필요합니다. 맥에서는 [Homebrew](http://mxcl.github.io/homebrew/) 를 사용하면 간단하게 boost 라이브러리를 설치할 수 있습니다. 
-
-    $ brew install boost
 
 #### 빌드
 
