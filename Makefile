@@ -1,5 +1,5 @@
 CPP = g++
-CFLAGS = -W -Wall -g
+CFLAGS = -W -Wall -g -finput-charset=UTF-8 -fextended-identifiers
 LFLAGS = -L/usr/local/lib -lboost_locale-mt -lboost_wserialization-mt -lboost_regex-mt
 
 TARGET = cppjosa.exe
