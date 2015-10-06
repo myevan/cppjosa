@@ -16,3 +16,10 @@ l
 *.lai
 *.la
 *.a
+
+# VisualStudio 
+*.suo
+*.sdf
+*.opensdf
+Debug
+Release
